@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+
+{% block title %} Classification {% endblock title %}
+
+{% block body %}
+
+
+
+<form method="POST" action="/classification1">
+    {% csrf_token %}
+  <div class="container-fluid mb-4 px-0">
+    <label for="exampleInputEmail1" class="form-label">Age</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="age" aria-describedby="emailHelp">
+  </div>
+  <div class="container-fluid mb-3 px-0">
+    <label for="exampleInputPassword1" class="form-label">Experience</label>
+    <input type="text" class="form-control" name="experience" id="exampleInputPassword1">
+  </div >
+  <button type="submit" class="btn btn-outline-primary">Submit</button>
+</form>
+
+
+{% endblock body %}
+
